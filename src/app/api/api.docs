@@ -1,0 +1,71 @@
+Product Info
+
+
+
+GET  ALL
+/api/product
+
+GET SellerProducts BY ID
+/api/products/[sellerIdHere]
+
+/Get Arts by ID
+/api/art/[artId]
+
+POST 
+/api/products
+body schema  = productSchema
+
+DELETE
+/api/product/[_id] << this is the id from the mongodb, not the sellerID
+
+PUT
+/api/product/[_id] << this is the id from the mongodb, not the sellerID
+ body  = productSchema
+
+------------------------------------------------------------------------------------------------
+User Info
+
+GET USER BY ID
+/api/users/[userId]
+
+
+UPDATE user information
+/api/users/[userId]
+Body schema >>> {"description":"I hate art","level": "expert","image": "www.google.com", "first_name": "Lola", last_name:"Paloza"} <<<
+
+
+
+---------------------------------------------------------------------------
+
+Review Info
+
+
+/api/review/[_id] << this is the id from the mongodb, not the sellerID
+Body schema >>>> { "title": " ", "text": " ", "rating": 0} <<<<<<
+
+
+product/65ab2d29899906bb77f3f62a
+
+productSchema = {
+      "_id": "65ab2d29899906bb77f3f62a",
+      "sellerId": "c34232",
+      "title": "Outcome",
+      "description": "Description of Outcome",
+      "price": 200,
+      "rating": 5,
+      "category": "Good",
+      "image_url": "https://res.cloudinary.com/dygktir99/image/upload/f_auto,q_auto/zhbxaetjun2tyjixxzls",
+      "seller": {
+        "first_name": "Lola",
+        "last_name": "Paloza",
+        "description": "seller description",
+        "level": "NC"
+      },
+      "reviews": [
+        {
+          "title": "Amazing",
+          "text": "I liked a lot",
+          "rating": 5
+        }
+      ]
+    }
